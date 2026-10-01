@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Explicitly allowed AI Search Bots
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://icemasters.com.br/sitemap.xml

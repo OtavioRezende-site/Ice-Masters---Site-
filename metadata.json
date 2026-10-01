@@ -1,0 +1,6 @@
+{
+  "name": "Ice Masters Refrigeração e Climatização",
+  "description": "Website profissional da Ice Masters Refrigeração e Climatização em São Gonçalo e Maricá RJ. Manutenção, limpeza, higienização e reparos de ar-condicionado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
