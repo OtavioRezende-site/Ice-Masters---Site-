@@ -134,9 +134,20 @@ const AppContent: React.FC = () => {
   );
 };
 
+const getBasename = (): string => {
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('github.io')) {
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    if (segments.length > 0) {
+      return `/${segments[0]}`;
+    }
+  }
+  return '';
+};
+
 export default function App() {
+  const basename = getBasename();
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AppContent />
     </BrowserRouter>
   );

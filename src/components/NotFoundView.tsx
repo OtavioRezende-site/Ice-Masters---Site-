@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { AlertTriangle, Home, Phone } from 'lucide-react';
 import { SITE } from '../config/siteConfig';
 import { CONTENT } from '../config/content';
 
 interface NotFoundViewProps {
-  onReturnHome: () => void;
+  onReturnHome?: () => void;
 }
 
 export const NotFoundView: React.FC<NotFoundViewProps> = ({ onReturnHome }) => {
@@ -32,14 +33,14 @@ export const NotFoundView: React.FC<NotFoundViewProps> = ({ onReturnHome }) => {
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <button
-            type="button"
+          <Link
+            to="/"
             onClick={onReturnHome}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0D7FF2] hover:bg-[#0b6ad0] text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#1871F3] hover:bg-[#1260D4] text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all cursor-pointer"
           >
             <Home className="w-4 h-4" />
             <span>{CONTENT.notFound.buttonText}</span>
-          </button>
+          </Link>
 
           <a
             href={SITE.phone.telLink}
